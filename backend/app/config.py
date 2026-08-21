@@ -8,6 +8,10 @@ class Settings(BaseSettings):
     upload_directory: str = "uploads"
     frontend_url: str = "http://localhost:3000"
 
+    # OCR configuration
+    tesseract_cmd: str | None = None
+    ocr_language: str = "eng"
+
     model_config = SettingsConfigDict(
         env_file=".env",
         env_file_encoding="utf-8",
