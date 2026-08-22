@@ -31,7 +31,7 @@ Supports:
 - JPG
 - JPEG
 
-Users can upload documents through the web interface.
+Users can upload documents through the web interface. Max Size : 10MB
 
 The backend validates:
 
@@ -81,3 +81,5 @@ Each generated summary contains:
     "Important conclusion"
   ]
 }
+```
+####*The Summary response may take time*
