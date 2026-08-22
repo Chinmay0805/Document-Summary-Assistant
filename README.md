@@ -18,11 +18,6 @@ https://your-vercel-app.vercel.app
 **Backend API:**  
 https://your-render-api.onrender.com
 
-**API Documentation:**  
-https://your-render-api.onrender.com/docs
-
-> Replace the URLs above with the deployed URLs after deployment.
-
 ---
 
 ## Features
