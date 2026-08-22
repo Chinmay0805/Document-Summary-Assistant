@@ -3,19 +3,31 @@ from pathlib import Path
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
-class Settings(BaseSettings):
-    max_file_size_mb: int = 10
-    upload_directory: str = "uploads"
-    frontend_url: str = "http://localhost:3000"
+BASE_DIR = Path(__file__).resolve().parent.parent
 
-    # OCR configuration
-    tesseract_cmd: str | None = None
+UPLOAD_DIR = BASE_DIR / "uploads"
+UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
+
+
+class Settings(BaseSettings):
+    # File upload
+    max_file_size_mb: int = 10
+
+    # OCR
+    tesseract_cmd: str = ""
     ocr_language: str = "eng"
+
+    # Gemini
+    gemini_api_key: str = ""
+    gemini_model: str = "gemini-2.5-flash"
+
+    # Frontend / CORS
+    frontend_url: str = "http://localhost:3000"
 
     model_config = SettingsConfigDict(
         env_file=".env",
         env_file_encoding="utf-8",
-        case_sensitive=False,
+        extra="ignore",
     )
 
     @property
@@ -24,6 +36,3 @@ class Settings(BaseSettings):
 
 
 settings = Settings()
-
-UPLOAD_DIR = Path(settings.upload_directory)
-UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
