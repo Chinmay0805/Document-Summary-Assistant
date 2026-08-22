@@ -13,10 +13,10 @@ AI integration, validation, testing, and responsive UI development.
 ## Live Demo
 
 **Frontend:**  
-https://your-vercel-app.vercel.app
+[https://your-vercel-app.vercel.app](https://document-summary-assistant-pi.vercel.app/)
 
 **Backend API:**  
-https://your-render-api.onrender.com
+[https://your-render-api.onrender.com](https://document-summary-assistant-7zm8.onrender.com)
 
 ---
 
