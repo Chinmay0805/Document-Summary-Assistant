@@ -82,4 +82,4 @@ Each generated summary contains:
   ]
 }
 ```
-####*The Summary response may take time*
+### *The Summary response may take time*
